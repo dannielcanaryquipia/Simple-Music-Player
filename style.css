@@ -37,12 +37,12 @@ body{
     text-transform: capitalize;
 }
 .music-name{
-    font-size: 40px;
+    font-size: 1.5rem;
     font-weight: 500;
     margin-bottom: 10px;
 }
 .artist-name{
-    font-size: 20px;
+    font-size: 1.1rem;
 }
 
 .disk{
