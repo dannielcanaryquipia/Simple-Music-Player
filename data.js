@@ -60,3 +60,4 @@ let songs = [
         cover: 'images/rexorangecountry.jpg',
     }
 ]
+

@@ -73,12 +73,13 @@ body{
     border-radius: 50%;
     background: #5f7a61;
 }
+
 .song-slider{
     width: 100%;
     position: relative;
 }
 .seek-bar{
-    /*-webkit-appearance: none;*/
+    -webkit-appearance: none;
     width: 100%;
     height: 8px;
     border-radius: 10px;
@@ -97,6 +98,47 @@ body{
 .current-time,
 .song-duration{
     font-size: 10px;
+}
+
+/*i will add a song style for songs.html*/
+.song-list {
+    width: 90%;
+    margin: auto;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.song-list h1 {
+    margin-bottom: 20px;
+}
+
+.songs-container {
+    list-style: none;
+    padding: 0;
+}
+
+.songs-container li {
+    background: var(--background-color);
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.songs-container li:hover {
+    background: var(--text-color);
+    color: var(--background-color);
+}
+
+.songs-container img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    margin-right: 15px;
 }
 
 .song-duration{
@@ -189,4 +231,114 @@ body{
         transform: rotate(360deg);
     }
 }
+
+/* Navigation button styling */
+.navigation {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+.navigation button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.navigation button:hover {
+    transform: scale(1.2);
+}
+
+#songListBtn {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: background 0.3s, color 0.3s;
+}
+
+#songListBtn:hover {
+    background-color: var(--text-color);
+    color: var(--background-color);
+}
+
+#songListBtn i {
+    font-size: 18px;
+}
+/*added media queries*/
+/* For desktop view */
+@media (min-width: 768px) {
+    .music-player {
+        width: 500px;
+        height: 600px;
+    }
+
+    .disk {
+        width: 250px;
+        height: 250px;
+    }
+
+    .play-btn {
+        width: 80px;
+        height: 80px;
+    }
+
+    .btn {
+        width: 50px;
+        height: 50px;
+    }
+
+    .song-list {
+        width: 70%;
+    }
+
+    .songs-container li {
+        padding: 20px;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .song-list h1 {
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+
+    .songs-container li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .songs-container img {
+        margin-bottom: 10px;
+    }
+
+    .music-player {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .disk {
+        width: 150px;
+        height: 150px;
+    }
+
+    .play-btn {
+        width: 50px;
+        height: 50px;
+    }
+
+    .btn {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+
 
